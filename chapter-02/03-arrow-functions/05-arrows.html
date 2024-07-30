@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arrow Functions</title>
+</head>
+<body>
+  <h1>Arrow Functions</h1>
+  <p>Open the console</p>
+  <script>
+    //function
+    var lordify = function(firstName, land) {
+      if(!firstName){
+        throw new Error("A firstName is required to lordify");
+      }
+      if(!land){   // undefined, null, '' -> false
+        throw new Error('A lord must have a land');
+      }
+      return `${firstName} of ${land}`;
+    }
+    
+    //console.log(lordify("kelly", "Sonoma"));
+    console.log( lordify("Dave") );
+  </script>
+  
+</body>
+</html>
