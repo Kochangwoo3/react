@@ -1,9 +1,9 @@
+import React from "react";
+import StarRating from "./StarRating";
 
 function App() {
   return (
-    <div className="App">
-        <h1>안녕리엑트!!!!!</h1>
-    </div>
+    <StarRating />
   );
 }
 
