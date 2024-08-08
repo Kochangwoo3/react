@@ -20,11 +20,7 @@ export default function AddColorForm({ onNewColor = f=>f}) {
         placeholder="color title..."
         required
       />
-      <input
-        {...colorProps}
-        type="color"
-        required 
-      />
+      <input {...colorProps} type="color" required />
       <button>ADD</button>
     </form>
   );
