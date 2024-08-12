@@ -3,7 +3,7 @@ import React, { useState } from "react";
 function Checkbox() {
   const [checked, setChecked] = useState(false);
 
-  alert(`checked: ${checked.toString()}`);
+  alert(`checked: ${checked.toString()}`);  // 블럭킹 멈춤  - 화면 랜더링 안됨
 
   return (
     <>

@@ -14,7 +14,7 @@ function Checkbox() {
     </>
   );
 
-  alert(`checked: ${checked.toString()}`);
+  alert(`checked: ${checked.toString()}`);   // 랜더링 되지만 ALERT는 도달 불가 코드
 
 }
 
