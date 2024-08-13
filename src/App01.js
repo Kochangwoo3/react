@@ -1,28 +1,21 @@
-import React, {useState} from 'react';
-import { useEffect } from 'react';
+import React, { useState } from 'react';
+import Cat from './Cat';
+import PureCat from './PureCat';
 
-export default function App01() {
-  const [count, setCount] = useState(1);
-  const [name, setName] = useState('');
-
-  const handleCountUpdate = () => {
-    setCount(count + 1);
-  }
-  const handleInputChange = (e) => {
-    setName(e.target.value);
-  }
-
-  // 랜더링 될때마다 매번 실행됨
-  useEffect(() => {
-    console.log(`랜더링...useEffect  ${count}`);
-  }, []);
+function App01() {
+  const [cats, setCats] = useState(['Biscuit', 'Jungle', 'Outlaw']);
 
   return (
-    <div>
-      <button onClick={handleCountUpdate}>Update</button>
-      <span>count: {count}</span><br />
-      <input type="text" value={name} onChange={handleInputChange} />
-      <span></span>
-    </div>
+    <>
+      {cats.map((name, i) => (
+        <PureCat key={i} name={name} />
+      ))}
+
+      <button onClick={() => setCats([...cats, prompt('Name a cat')])}>
+        Add a Cat
+      </button>
+    </>
   );
 }
+
+export default App01;

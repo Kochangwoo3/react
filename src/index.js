@@ -1,11 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import './index.css';
 import App from './App';
-import Useeffect1 from './Useeffect1';
-import CleanUp from './Cleanup';
-import Usememo1 from './Usememo1';
-import Usememo2 from './Usememo2';
-import Usecallback1 from './Usecallback1';
+import reportWebVitals from './reportWebVitals';
+import Usereducer1 from './Usereducer1';
+import Usereducer2 from './Usereducer2';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Usecallback1 />);
+root.render(
+  <React.StrictMode>
+    <Usereducer2 />
+  </React.StrictMode>
+);
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();
