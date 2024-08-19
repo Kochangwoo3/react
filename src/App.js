@@ -1,19 +1,22 @@
-import { Suspense, lazy, useState } from 'react';
-import Agreement from './Agreement';
-import { ClimbingBoxLoader } from 'react-spinners';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-const Main = lazy(() => import('./Main.js'));
+App.propTypes = {
+  // name: PropTypes.string
+  // name: PropTypes.string.isRequired,
+  // name: PropTypes.any.isRequired
 
-function App() {
-  const [agree, setAgree] = useState(false);
+  name: PropTypes.oneOf(['React', 'JS']),
 
-  if (!agree) return <Agreement onAgree={() => setAgree(true)} />;
+  // PropTypes.array,
+  //          .object,
+  //    .bool, .func, .number, .string,  .symbol
+};
 
+function App({ name }) {
   return (
     <div>
-      <Suspense fallback={<ClimbingBoxLoader />}>
-        <Main />
-      </Suspense>
+      <h1>We're {name === 'JS' ? 'JavaScript' : 'React'}</h1>
     </div>
   );
 }
